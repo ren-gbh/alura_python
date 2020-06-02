@@ -45,7 +45,7 @@ for rodada in range(1, total_de_tentativas + 1):
         elif (menor):
             print("Você errou! O seu chute foi menor que o número secreto!")
         if (rodada == total_de_tentativas):
-            print("O número secreto era {}. Você fez {}".format(
+            print("O número secreto era {}. Você fez {} pontos!".format(
                 numero_secreto, pontos))
 
     rodada = rodada + 1
