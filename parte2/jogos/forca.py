@@ -29,6 +29,11 @@ def jogar():
 
         print(letras_acertadas)
 
+    if (acertou):
+        print('Você ganhou!')
+    else:
+        print('Você perdeu...')
+
     print("Fim do jogo")
 
 if (__name__ == "__main__"):
