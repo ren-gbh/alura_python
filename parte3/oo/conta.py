@@ -12,20 +12,22 @@ class Conta:
     def extrato(self):
         print("Saldo é {} do titular {}".format(self.__saldo, self.__titular))
 
-    def get_limite(self):
-        return self.__limite
-
     def get_saldo(self):
         return self.__saldo
 
     def get_titular(self):
         return self.__titular
 
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
+
     def saca(self, valor):
         self.__saldo -= valor
-
-    def set_limite(self, limite):
-        self.__limite = limite
 
     def transfere(self, valor, destino):
         self.saca(valor)
