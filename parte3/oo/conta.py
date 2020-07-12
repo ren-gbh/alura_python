@@ -6,6 +6,10 @@ class Conta:
         self.__saldo = saldo
         self.__limite = limite
 
+    @staticmethod
+    def codigo_banco():
+        return "001"
+
     @property
     def limite(self):
         return self.__limite
