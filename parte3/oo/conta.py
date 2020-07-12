@@ -29,7 +29,14 @@ class Conta:
         print("Saldo é {} do titular {}".format(self.__saldo, self.__titular))
 
     def saca(self, valor):
-        self.__saldo -= valor
+        if (self.__pode_sacar(valor)):
+            self.__saldo -= valor
+        else:
+            print("O valor {} passou o limite".format(valor))
+
+    def __pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
 
     def transfere(self, valor, destino):
         self.saca(valor)
