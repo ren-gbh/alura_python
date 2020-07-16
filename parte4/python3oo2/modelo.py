@@ -24,6 +24,6 @@ playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 for programa in playlist_fim_de_semana:
     print(programa)
 
-print(f'Tamanho do playlist: { playlist_fim_de_semana.tamanho }')
+print(f'Tamanho do playlist: { len(playlist_fim_de_semana) }')
 print(f'Tem o filme vingadores na lista? R: { vingadores in playlist_fim_de_semana }')
 print(playlist_fim_de_semana[0])

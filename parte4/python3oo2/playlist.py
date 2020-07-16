@@ -7,6 +7,5 @@ class Playlist:
     def __getitem__(self, item):
         return self.__programas[item]
 
-    @property
-    def tamanho(self):
+    def __len__(self):
         return len(self.__programas)
