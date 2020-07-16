@@ -21,8 +21,9 @@ atlanta.dar_like()
 filmes_e_series = [vingadores, atlanta, demolidor, tmep]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-print(f'Tamanho do playlist: { playlist_fim_de_semana.tamanho }')
-print(f'Tem o filme demolidor na lista? R: { demolidor in playlist_fim_de_semana.listagem }')
-
-for programa in playlist_fim_de_semana.listagem:
+for programa in playlist_fim_de_semana:
     print(programa)
+
+print(f'Tamanho do playlist: { playlist_fim_de_semana.tamanho }')
+print(f'Tem o filme vingadores na lista? R: { vingadores in playlist_fim_de_semana }')
+print(playlist_fim_de_semana[0])

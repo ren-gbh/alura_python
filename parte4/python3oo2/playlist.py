@@ -4,9 +4,8 @@ class Playlist:
         self.nome = nome
         self.__programas = programas
 
-    @property
-    def listagem(self):
-        return self.__programas
+    def __getitem__(self, item):
+        return self.__programas[item]
 
     @property
     def tamanho(self):
