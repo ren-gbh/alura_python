@@ -19,5 +19,5 @@ class Programa:
     def dar_like(self):
         self._likes += 1
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} -  {self.likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} -  {self.likes} Likes'
