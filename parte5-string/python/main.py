@@ -10,7 +10,7 @@ valor = argumentos_url.extrai_valor()
 print(moeda_destino, moeda_origem,valor)
 '''
 
-padrao = "[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789][0123456789][0123456789]"
+padrao = "[0-9]{4}-[0-9]{4}"
 
 email1 = "Meu número é 1234-1234"
 email2 = "Fale comigo em 1234-1234 esse é meu telefone"
