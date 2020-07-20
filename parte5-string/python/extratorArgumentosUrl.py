@@ -9,6 +9,20 @@ class ExtratorArgumentosUrl:
     def __len__(self):
         return len(self.url)
 
+    def __str__(self):
+        moeda_origem, moeda_destino = self.extrai_argumentos()
+        return "Valor: {}\nMoeda origem: {}\nMoeda destino: {}".format(
+            self.extrai_valor(),
+            moeda_origem,
+            moeda_destino
+        )
+
+        '''
+        return f"Valor: { self.extrai_valor() }\n" \
+               f"Moeda origem: { moeda_origem }\n" \
+               f"Moeda destino: { moeda_destino }"
+        '''
+
     @staticmethod
     def is_valid_url(url):
         if url and url.startswith("https://bytebank.com"):
