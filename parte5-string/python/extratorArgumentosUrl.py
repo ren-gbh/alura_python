@@ -6,6 +6,9 @@ class ExtratorArgumentosUrl:
         else:
             raise LookupError("Url Inválida!")
 
+    def __len__(self):
+        return len(self.url)
+
     @staticmethod
     def is_valid_url(url):
         if url and url.startswith("https://bytebank.com"):
