@@ -8,7 +8,7 @@ class ExtratorArgumentosUrl:
 
     @staticmethod
     def is_valid_url(url):
-        if url:
+        if url and url.startswith("https://bytebank.com"):
             return True
         else:
             return False
