@@ -6,6 +6,9 @@ class ExtratorArgumentosUrl:
         else:
             raise LookupError("Url Inválida!")
 
+    def __eq__(self, outra_instancia):
+        return self.url == outra_instancia.url
+
     def __len__(self):
         return len(self.url)
 
@@ -16,12 +19,6 @@ class ExtratorArgumentosUrl:
             moeda_origem,
             moeda_destino
         )
-
-        '''
-        return f"Valor: { self.extrai_valor() }\n" \
-               f"Moeda origem: { moeda_origem }\n" \
-               f"Moeda destino: { moeda_destino }"
-        '''
 
     @staticmethod
     def is_valid_url(url):
